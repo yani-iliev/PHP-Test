@@ -1,0 +1,7 @@
+This repository provides solutions to each of the tasks inside phptest.pdf.
+You can find the solution for task 1(one) inside the folder named 1(one), for 
+task 2(two) inside the folder named 2(two) and so on.
+The file index.html, located in the root of the repository,
+provides detailed information for the solutions:
+Number of files, number of languages used, number of lines(code lines, blank lines, comments),
+Time taken to complete all assignments, lines per hour.
