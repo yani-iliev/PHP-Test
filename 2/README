@@ -1,0 +1,21 @@
+How to run?
+=======================
+1. Create a new database
+2. Import the file DB.sql to the database
+3. Chance config.php to reflect your database name and login information
+4. Host the application on your webserver
+5. Navigate your browser to form.php
+6. Login with the Login Data listed below.
+7. On success you will see the member area - just an image
+8. On failure you should see an error message describing what went wrong.
+
+Login Data
+=======================
+Username: test
+Password: tester
+
+Time
+=======================
+Coding - 2 hours
+Documentation - 20 minutes
+Total: 2 hours 20 minutes

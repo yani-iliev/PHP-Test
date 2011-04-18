@@ -1,0 +1,63 @@
+How to run the script?
+=======================
+Make sure that the script is executable (chmod +x youtube.php)
+If your php binary is not located in /usr/bin/ you will have to change the very first line
+to reflect the location of your php binary. Examples:
+#!/usr/bin/php
+#!/usr/local/bin/php
+
+Once you are able to properly executed the script, you will find out that the script 
+accepts one mandatory parameter and one optional parameter.
+The mandatory parameter is the URL of the YouTube video and the 
+optional parameter is the filename where to save the output.
+./youtube.php url [filename]
+
+The example below will output the xml data to the console|stdout
+./youtube.php http://www.youtube.com/watch?v=0_fPV13lKm4
+
+The output:
+<?xml version="1.0"?>
+<videos>
+  <video>
+    <title>Funny Animation</title>
+    <description>LOL!</description>
+    <flv>http://v3.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Calgorithm%2Cburst%2Cfactor&amp;algorithm=throttle-factor&amp;itag=34&amp;ipbits=8&amp;burst=40&amp;sver=3&amp;signature=35DE101BFF1E5C3F9CB56BD9EA1F5B971E2897D6.D752710FFD0E37C5EBEA68FE8A904A92F96800FE&amp;expire=1303102800&amp;key=yt1&amp;ip=87.0.0.0&amp;factor=1.25&amp;id=d3f7cf575de52a6e</flv>
+  </video>
+</videos>
+
+An example that outputs the xml data to data.xml file
+./youtube.php http://www.youtube.com/watch?v=0_fPV13lKm4 data.xml
+
+When you open the data.xml, you should see the following content:
+<?xml version="1.0"?>
+<videos>
+  <video>
+    <title>Funny Animation</title>
+    <description>LOL!</description>
+    <flv>http://v3.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Calgorithm%2Cburst%2Cfactor&amp;algorithm=throttle-factor&amp;itag=34&amp;ipbits=8&amp;burst=40&amp;sver=3&amp;signature=35DE101BFF1E5C3F9CB56BD9EA1F5B971E2897D6.D752710FFD0E37C5EBEA68FE8A904A92F96800FE&amp;expire=1303102800&amp;key=yt1&amp;ip=87.0.0.0&amp;factor=1.25&amp;id=d3f7cf575de52a6e</flv>
+  </video>
+</videos>
+
+Time
+=======================
+Coding - 1 hour
+Documentation - 30 minutes
+Total: 1 hour and 30 minutes
+
+Author Notes
+=======================
+I wasn't sure for the exact meaning of - The output should be in the form of an XML -
+There are a couple possibilities:
+1. Output to a file.
+2. Output to stdout.
+3. Output to the stdout with proper header. - header( "Content-type: text/xml" );
+
+Since the application is a PHP CLI program it shouldn't be outputting anything to the browser.
+Instead, it can output only to a file and stdout.
+That is the reason why my application only supports the first two options.
+
+Youtube does NOT give the FLV location via its API. I had to look for another way to find the flv 
+location. That is where the YouTube_VideoInfo class by Ifthikhan Nazeem becomes handy.
+
+The video title and description are extracted from the YouTube API by using SimpleXML to parse 
+the data.

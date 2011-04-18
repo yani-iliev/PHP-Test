@@ -1,0 +1,88 @@
+/**
+ * Styles the login page
+ * @version 0.1
+ * @author Yani Iliev <yani.iliev@cspath.com>
+ */
+BODY {
+	margin: 0;
+	padding: 0;
+}
+#holder {
+	margin: 100px auto;
+	width: 260px;
+	padding: 20px 20px;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-webkit-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-khtml-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+}
+#holder form {
+	width: 260px;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.row {
+	float: left;
+	width: 260px;
+}
+.row label {
+	float: left;
+	width: 260px;
+	font-family: 'Lucida Grande', Verdana, Arial, 'Bitstream Vera Sans', sans-serif;
+	font-size: 13px;
+}
+.row input {
+	float: left;
+	width: 252px;
+	font-size: 24px;
+	padding: 3px;
+	border: 1px solid #E5E5E5;
+	background: #FAFFBD;
+}
+.lastrow {
+	float: left;
+	width: 100%;
+}
+.lastrow label {
+	font-family: 'Lucida Grande', Verdana, Arial, 'Bitstream Vera Sans', sans-serif;
+	font-size: 11px;
+}
+.lastrow input[type="button"] {
+	border-color: #13455B;
+	color: #EAF2FA;
+	text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	padding: 3px 10px;
+	border: none;
+	font-size: 12px;
+	border-style: solid;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	cursor: pointer;
+	text-decoration: none;
+	border-width: 1px;
+	background: #21759B;
+	font-weight: bold;
+}
+#login_error {
+	background-color: #FFEBE8;
+	border-color: #C00;
+	margin: 0 0 16px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 12px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	display: none;
+}

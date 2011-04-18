@@ -1,0 +1,104 @@
+/**
+ * A simple RSS URL reader
+ * 
+ * Uses Google Feed API (http://code.google.com/apis/feed/v1/devguide.html) 
+ * to parse RSS URL and displaythe content stored in the RSS
+ *
+ * @version 0.1
+ * @author Yani Iliev <yani.iliev@cspath.com>
+ */
+BODY {
+	margin: 0;
+	padding: 0;
+}
+#holderUrl {
+	margin: 100px auto 0px auto;
+	width: 860px;
+	padding: 20px 20px;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-webkit-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-khtml-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+}
+#holderUrl input[type="text"] {
+	width: 795px;
+	font-size: 24px;
+	padding: 3px;
+	border: 1px solid #E5E5E5;
+	background: #FAFFBD;
+	float: left;
+}
+#holderUrl input[type="button"] {
+	border-color: #13455B;
+	color: #EAF2FA;
+	text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	padding: 10px 10px;
+	border: none;
+	font-size: 12px;
+	border-style: solid;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	cursor: pointer;
+	text-decoration: none;
+	border-width: 1px;
+	background: #21759B;
+	font-weight: bold;
+	float: left;
+}
+#holderRss {
+	margin: 50px auto;
+	width: 860px;
+	padding: 20px 20px;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-webkit-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	-khtml-box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	box-shadow: rgba(200, 200, 200, 1) 0 4px 18px;
+	display: none;
+}
+#top {
+	text-align: center;
+}
+#errorHolder {
+	background-color: #FFEBE8;
+	border-color: #C00;
+	margin: 0 0 16px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 12px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	display: none;
+}
+.feed {
+	width: 860px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	display: none;
+}
+.feed h3 {
+	font-size: 1em;
+}
+.feed h6 {
+	margin: -1.5em 0em 0em 0em;
+}
+.feed p {
+	font-size: 0.9em;
+}
